@@ -1,0 +1,4 @@
+# Copy/Rename this file into .env and fill in the necessary details
+
+COMMAND_TOKEN="!"
+BOT_TOKEN=""
