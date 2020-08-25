@@ -1,0 +1,16 @@
+{
+  "name": "discord-bot-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate code for a discord bot that responds to commands",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "UwUbuntUwU",
+  "license": "ISC",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0"
+  }
+}
