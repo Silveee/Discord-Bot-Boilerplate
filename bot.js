@@ -11,7 +11,11 @@ const discord = require('discord.js');
 
 const COMMAND_TOKEN = process.env.COMMAND_TOKEN || '.';
 const bot = new discord.Client();
-const commands = require('./commands');
+const commands = {};
+
+// Merge all commands from all files in the commands folder into a single object
+for (const file of require('fs').readdirSync('./commands'))
+	if (file.endsWith('.js')) Object.assign(commands, require('./commands/'+ file));
 
 bot.on('message', message => {
 	// Only respond to text-type messages that start with the command token,
