@@ -2,7 +2,7 @@
 
 module.exports = {
 	testing: 'test',
-	test: (args, channel) => {
+	test: ({ channel }) => {
 		channel.send('hi');
 	},
 };

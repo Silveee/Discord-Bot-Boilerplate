@@ -14,14 +14,18 @@ const bot = new discord.Client();
 const commands = require('./commands');
 
 bot.on('message', message => {
-	if (message.channel.type !== 'text' || !message.content.startsWith(COMMAND_TOKEN)) return;
+	// Only respond to text-type messages that start with the command token,
+	// Do not respond if the sender of the message is a bot
+	if (message.channel.type !== 'text' || !message.content.startsWith(COMMAND_TOKEN) || message.author.bot) return;
 
 	let commandName = message.content.split(' ')[0].slice(1);
-	const arg = message.content.slice(commandName.length + 2).trim();
+	const args = message.content.slice(commandName.length + 2).trim();
 	if (commandName in commands) {
 		let command = commands[commandName];
-		if (typeof command === 'string') command = commands[command]; // Command alias
-		command(arg, message.channel, message.member, message.mentions);
+		// If the value associated with the command in the commands object is a string,
+		// then it's an alias for another command
+		if (typeof command === 'string') command = commands[command];
+		command({ args, command: commandName, channel: message.channel, user: message.member, mentions: message.mentions });
 	}
 });
 
