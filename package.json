@@ -9,8 +9,11 @@
   "author": "UwUbuntUwU",
   "license": "ISC",
   "dependencies": {
-    "bufferutil": "^4.0.1",
-    "discord.js": "^12.3.1",
+    "bufferutil": "^4.0.3",
+    "discord.js": "^12.5.1",
     "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
   }
 }
