@@ -2,18 +2,15 @@
   "name": "discord-bot-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate code for a discord bot that responds to commands",
-  "main": "bot.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node app.js"
   },
   "author": "UwUbuntUwU",
   "license": "ISC",
   "dependencies": {
     "bufferutil": "^4.0.3",
     "discord.js": "^12.5.1",
-    "dotenv": "^8.2.0"
-  },
-  "devDependencies": {
-    "eslint": "^7.17.0"
+    "js-yaml": "^3.14.1"
   }
 }

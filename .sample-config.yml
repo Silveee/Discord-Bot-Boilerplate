@@ -1,0 +1,6 @@
+# Configuration values go here
+
+# Your bot token
+BOT_TOKEN: ''
+# The character that a message needs to start with for the script to recognize it as a command
+COMMAND_CHAR: '!'
