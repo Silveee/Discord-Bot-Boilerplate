@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-	testing: 'test',
-	test: ({ channel }) => {
-		channel.send('hi');
-	},
+	testing: 'test', // Alias for test
+	test: async ({ channel }) => {
+		await channel.send('hi');
+	}
 };
